@@ -1,6 +1,7 @@
 from datetime import datetime
 
 # https://meetup-api.readthedocs.io/en/latest/meetup_api.html
+from google.cloud import firestore
 from meetup.api import Client
 
 # https://secure.meetup.com/meetup_api/console/?path=/find/topic_categories
@@ -16,6 +17,8 @@ GROUP_KEYS_TO_INCLUDE = [
     'members',
     'localized_location',
 ]
+
+db = firestore.Client()
 
 
 def get_deep_value(value, key):
@@ -55,6 +58,8 @@ def insert_groups_into_db(events):
         "events": events,
         "updated": datetime.now().isoformat(),
     }
+    ref = db.collection('meetup-data').document('python')
+    ref.set(data)
 
 
 if __name__ == "__main__":
