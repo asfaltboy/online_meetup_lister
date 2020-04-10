@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Due to the COVID-19 global pandemic we're all doing our duty and staying home. 
+Due to the COVID-19 global pandemic we're all doing our duty and staying home.
 
 But, we are all still hungry for knowledge and social interaction that
 a meetup can provide.
@@ -15,12 +15,22 @@ allow worlwide users to find events outside of their "vacinity (up to 100 miles)
 
 This is exactly my goal for writig this applications:
 
-**writing a scraper of meetup.com to show all upcoming events up to max number of hours hours away (TZ) on given topic/s
+**writing a scraper of meetup.com to show all upcoming events up to max number of hours hours away (TZ) on given topic/s**
 
-### Setup & Running
+## Setup & Running
 
 TODO: write me ...
 
+### Updating Python Dependencies
+
+TODO: automate this update with github actions (periodically?)
+
+Install pip-tools and run `pip-compile`:
+
+```bash
+pip install pip-tools
+pip-compile
+```
 
 [1]: https://help.meetup.com/hc/en-us/articles/360041040931
 [2]: https://help.meetup.com/hc/en-us/articles/360040609112
