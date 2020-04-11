@@ -1,8 +1,14 @@
-import Vue from 'vue'
-import App from './App.vue'
-import * as firebase from "firebase";
+import Vue from "vue";
+import App from "./App.vue";
+import firebase from "firebase/app";
+import Vuex from "vuex";
+import VuexPersist from "vuex-persist";
+import Buefy from "buefy";
+import "buefy/dist/buefy.css";
 
-Vue.config.productionTip = false
+import user from "./store/user";
+
+Vue.config.productionTip = false;
 
 const configOptions = {
   apiKey: "AIzaSyDSvnMa1SFKiiLhibtutMWELebVJsi_QYM",
@@ -16,6 +22,22 @@ const configOptions = {
 
 firebase.initializeApp(configOptions);
 
+Vue.use(Vuex);
+Vue.use(Buefy);
+
+const vuexPersist = new VuexPersist({
+  key: "online-meetup-lister",
+  storage: window.localStorage
+});
+
+const store = new Vuex.Store({
+  plugins: [vuexPersist.plugin],
+  modules: {
+    user
+  }
+});
+
 new Vue({
   render: h => h(App),
-}).$mount('#app')
+  store
+}).$mount("#app");

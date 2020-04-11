@@ -1,23 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <LoginButton />
+    <Navbar />
+    <div id="header"></div>
+    <div></div>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-import LoginButton from './components/LoginButton.vue'
+import Navbar from "./components/Navbar.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    LoginButton
-  },
-  props: {}
-}
+    Navbar
+  }
+};
 </script>
-
 
 <style>
 #app {
@@ -27,5 +25,15 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  /* flex: 2; */
+}
+#title {
+  display: flex;
+  justify-items: self-start;
 }
 </style>
