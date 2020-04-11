@@ -8,6 +8,7 @@ import "buefy/dist/buefy.css";
 
 import user from "./store/user";
 import time from "./store/time";
+import router from './router'
 
 Vue.config.productionTip = false;
 
@@ -45,5 +46,6 @@ const store = new Vuex.Store({
 
 new Vue({
   render: h => h(App),
+  router,
   store
 }).$mount("#app");

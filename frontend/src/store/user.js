@@ -40,12 +40,10 @@ export default {
         });
     },
     logout: function({ commit }) {
-      console.log("logging out the user");
       firebase
         .auth()
         .signOut()
         .then(function() {
-          console.log("got it!");
           commit("unsetUser");
         })
         .catch(function(error) {

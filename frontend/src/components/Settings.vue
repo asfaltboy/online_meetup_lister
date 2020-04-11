@@ -4,10 +4,10 @@
     <div class="box is-inline-flex">
       <b-field label="Default available time" horizontal>
         <b-field label="Start" label-position="on-border">
-          <b-timepicker v-model="time.defaultAvailable.start" inline></b-timepicker>
+          <b-timepicker v-model="defaultStart" inline></b-timepicker>
         </b-field>
         <b-field label="End" label-position="on-border">
-          <b-timepicker v-model="time.defaultAvailable.end" inline></b-timepicker>
+          <b-timepicker v-model="defaultEnd" inline></b-timepicker>
         </b-field>
       </b-field>
     </div>
@@ -16,7 +16,17 @@
 
 <script>
 import { mapState } from "vuex";
+import * as moment from "moment";
+
 export default {
+  watch: {
+    defaultStart(val) {
+      this.defaultStart = moment(val);
+    },
+    defaultEnd(val) {
+      this.defaultEnd = moment(val);
+    }
+  },
   computed: {
     ...mapState(["time"])
   }
