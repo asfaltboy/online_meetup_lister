@@ -7,6 +7,7 @@ import Buefy from "buefy";
 import "buefy/dist/buefy.css";
 
 import user from "./store/user";
+import time from "./store/time";
 
 Vue.config.productionTip = false;
 
@@ -32,8 +33,13 @@ const vuexPersist = new VuexPersist({
 
 const store = new Vuex.Store({
   plugins: [vuexPersist.plugin],
+  state: {
+    eventCount: 0
+  },
+
   modules: {
-    user
+    user,
+    time
   }
 });
 

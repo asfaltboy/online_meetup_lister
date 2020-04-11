@@ -10,7 +10,7 @@
             <strong>{{ user.data.displayName }}</strong>
           </div>
           <div class="column">
-            <p class="image">
+            <p class="image is-48x48">
               <img id="user-photo" :src="user.data.photoURL" alt="photo" />
             </p>
           </div>

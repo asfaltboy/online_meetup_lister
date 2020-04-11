@@ -3,7 +3,6 @@ import "firebase/auth";
 
 export default {
   state: {
-    eventCount: 0,
     data: null
   },
   mutations: {
