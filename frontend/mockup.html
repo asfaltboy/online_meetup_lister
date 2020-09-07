@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mockup of the UI using Tailwind CSS</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <template name="eventCard">
+      <div
+        class="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl flex-col"
+      >
+        <img
+          src="https://secure.meetupstatic.com/photos/event/b/a/0/2/600_483287618.jpeg"
+          alt="logo"
+        />
+
+        <div class="pt-3 flex justify-between">
+          <div class="flex-shrink-0">
+            <h4 class="text-xl text-gray-900 leading-tight">ChitChat</h4>
+            <p class="text-base text-gray-600 leading-normal">
+              {eventName}
+            </p>
+          </div>
+          <div class="flex-shrink-0">
+            <h4 class="text-l text-gray-900 leading-tight">2020.05.29</h4>
+          </div>
+        </div>
+      </div>
+    </template>
+    <script src="https://unpkg.com/snuggsi"></script>
+
+    <link as="fetch" id="foo-bar" rel="preload" href="foo-bar.html" />
+
+    <foo-bar>
+      <p slot="content">
+        The quick brown fox jumped over the lazy dog
+      </p>
+    </foo-bar>
+
+    <!--<script>-->
+    <!--  const template = Template`eventCard`,-->
+    <!--    context = { eventName: "New Online Meetup!" };-->
+    <!--  template.bind(context);-->
+    <!--</script>-->
+  </body>
+</html>

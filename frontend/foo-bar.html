@@ -1,0 +1,29 @@
+<template onclick=onfoo>
+
+  <h2>foo-bar custom element</h2>
+
+  <slot name=content>Some Default Content</slot>
+
+  <ul>
+    <template name=bat>
+      <li>Item {#} - Value {self}
+    </template>
+  </ul>
+
+</template>
+
+
+<script>
+
+Element `foo-bar`
+
+(class extends HTMLElement {
+
+  onfoo (event)
+    { alert `Registered on foo-bar` }
+
+  get bat ()
+    { return ['football', 'soccer', 'baseball'] }
+})
+
+</script>

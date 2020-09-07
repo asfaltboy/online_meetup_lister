@@ -13,7 +13,7 @@ it even provides help article to explain [how to host events online][2].
 That said, meetup application still lacks the indexing features needed to
 allow worlwide users to find events outside of their "vacinity (up to 100 miles)".
 
-This is exactly my goal for writig this applications:
+This is exactly my goal for writing this applications:
 
 **writing a scraper of meetup.com to show all upcoming events up to max number of hours hours away (TZ) on given topic/s**
 
